@@ -41,6 +41,7 @@
         "httpCode": {
             "query": "echo_code",
             "header": "x-echo-code",
+            "env": "X_ECHO_CODE",
             "headerResponse": true
         },
         "httpHeaders": {

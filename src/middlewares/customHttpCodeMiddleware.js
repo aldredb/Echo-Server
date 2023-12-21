@@ -28,6 +28,7 @@ module.exports = (req, res, next) => {
   try {
     setupHttpCode(req.headers[config.get('commands:httpCode:header')], res);
     setupHttpCode(req.query[config.get('commands:httpCode:query')], res);
+    setupHttpCode(process.env[config.get('commands:httpCode:env')], res);
   } finally {
     next();
   }
